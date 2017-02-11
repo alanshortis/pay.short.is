@@ -1,0 +1,9 @@
+@mixin mq($mq) {
+  @if map-has-key($media-queries, $mq) {
+    @media #{inspect(map-get($media-queries, $mq))} {
+      @content;
+    }
+  } @else {
+    @warn 'No such responsive breakpoint';
+  }
+}
