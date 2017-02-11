@@ -1,5 +1,4 @@
 # PayPal and Monzo payment gateway
-[![Build Status](https://travis-ci.org/alanshortis/pay.short.is.svg?branch=master)](https://travis-ci.org/alanshortis/pay.short.is)
 
 Sounds more fancy than it is...
 
