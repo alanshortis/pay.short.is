@@ -1,6 +1,5 @@
 <?php $paymentValue = round(substr(strtok($_SERVER["REQUEST_URI"],'?'), 1), 2); ?>
-<?php setlocale(LC_MONETARY, 'en_GB'); ?>
-<?php $displayValue = money_format('%n', $paymentValue); ?>
+<?php $displayValue = '£' . number_format($paymentValue, 2, '.', ''); ?>
 <?php ($paymentValue < 100.01) ?: header('Location: https://paypal.me/shortis/' . $paymentValue); ?>
 
 <!DOCTYPE html>
