@@ -1,6 +1,0 @@
-FallbackResource /index.php
-
-# RewriteEngine On
-#
-# RewriteCond %{HTTP:HTTPS} !on
-# RewriteRule (.*) https://%{SERVER_NAME}/$1 [QSA,L,R=301]
