@@ -1,8 +1,13 @@
 import React, { Component } from "react";
 
 class Pay extends Component {
+  state = {
+    amount: this.props.match.params.amount || 0
+  };
+
   render() {
-    return <div>Pay.</div>;
+    const { amount } = this.state;
+    return <div>{amount}</div>;
   }
 }
 
