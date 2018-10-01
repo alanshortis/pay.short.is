@@ -18,12 +18,11 @@ class Pay extends Component {
 
   render() {
     const { displayAmount, amount } = this.state;
+    const message = `Pay Alan ${displayAmount}`;
     return (
       <div>
-        <Helmet>
-          <title>Pay Alan {displayAmount}</title>
-        </Helmet>
-        <h1>{displayAmount}</h1>
+        <Helmet title={message} />
+        <h1>{message}</h1>
         {this.validProviders.map(provider => (
           <Provider key={provider.id} provider={provider} amount={amount} />
         ))}
