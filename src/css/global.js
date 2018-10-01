@@ -16,6 +16,8 @@ injectGlobal`
     border: 0;
     padding: 0;
     margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
     &:focus {
       outline: 0;
     }
@@ -39,9 +41,18 @@ injectGlobal`
     font-size: 18px;
     line-height: 1.5;
     font-family: ${font.sans}, sans-serif;
+    font-weight: ${font.weight};
     color: ${color.type};
     background-color: ${color.background};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  #root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
   }
 `;
