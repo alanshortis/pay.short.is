@@ -7,7 +7,17 @@ import Provider from "./Provider";
 
 const Message = styled.h1`
   font-size: 2rem;
-  margin-bottom: 1em;
+`;
+
+const Divider = styled.p`
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin: 1em 0;
+  &::before,
+  &::after {
+    content: "\\2014";
+    margin: 0 1em;
+  }
 `;
 
 class Pay extends Component {
@@ -29,6 +39,7 @@ class Pay extends Component {
       <Fragment>
         <Helmet title={message} />
         <Message>{message}</Message>
+        <Divider>via</Divider>
         <div>
           {this.validProviders.map(provider => (
             <Provider key={provider.id} provider={provider} amount={amount} />
