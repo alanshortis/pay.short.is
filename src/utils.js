@@ -1,4 +1,4 @@
-export function formatNumbers(n) {
+export const formatNumbers = n => {
   n = isNaN(n) ? 0 : Math.abs(n.trim());
   return {
     amount: n.toFixed(2),
@@ -7,4 +7,7 @@ export function formatNumbers(n) {
       currency: "GBP"
     }).format(n)
   };
-}
+};
+
+export const validProvider = (min, max, amount) =>
+  (min === 0 || amount >= min) && (max === 0 || amount <= max);

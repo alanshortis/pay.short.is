@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { formatNumbers } from "../utils";
+import { formatNumbers, validProvider } from "../utils";
 import providers from "../data/providers";
 import Provider from "./Provider";
 
@@ -10,10 +10,8 @@ class Pay extends Component {
     this.state = formatNumbers(this.props.match.params.amount);
     this.props.history.push(`/${this.state.amount}`);
 
-    this.validProviders = providers.filter(
-      ({ min, max }) =>
-        (min === 0 || this.state.amount >= min) &&
-        (max === 0 || this.state.amount <= max)
+    this.validProviders = providers.filter(({ min, max }) =>
+      validProvider(min, max, this.state.amount)
     );
   }
 
