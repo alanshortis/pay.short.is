@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Helmet } from "react-helmet";
 import { formatNumbers, validProvider } from "../utils";
 import providers from "../data/providers";
 import Provider from "./Provider";
@@ -19,6 +20,9 @@ class Pay extends Component {
     const { displayAmount, amount } = this.state;
     return (
       <div>
+        <Helmet>
+          <title>Pay Alan {displayAmount}</title>
+        </Helmet>
         <h1>{displayAmount}</h1>
         {this.validProviders.map(provider => (
           <Provider key={provider.id} provider={provider} amount={amount} />
