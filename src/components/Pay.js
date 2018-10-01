@@ -15,7 +15,7 @@ class Pay extends Component {
     super(props);
 
     this.state = formatNumbers(this.props.match.params.amount);
-    this.props.history.push(`/${this.state.amount}`);
+    this.props.history.replace(`/${this.state.amount}`);
 
     this.validProviders = providers.filter(({ min, max }) =>
       validProvider(min, max, this.state.amount)
