@@ -1,8 +1,7 @@
-# PayPal and Monzo payment gateway
+# pay.short.is
 
 Sounds more fancy than it is...
 
-* Take a value from the URL.
-* Ask if the payment should go to [PayPal](https://www.paypal.me/shortis) or [Monzo](https://monzo.me/alanshortis).
-* Go to chosen provider with the value intact.
-* Monzo can only accept payments up to £100, so go to PayPal automatically if the value is over that limit.
+- Take a value from the URL.
+- Ask if the payment should go to one of a defined list of providers.
+- Go to chosen provider with the value intact.

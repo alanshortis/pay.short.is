@@ -1,19 +1,20 @@
 {
   "name": "pay.short.is",
-  "version": "1.0.0",
-  "description": "PayPal and Monzo payment gateway",
-  "main": "index.php",
-  "repository": "git@github.com:alanshortis/pay.short.is.git",
-  "author": "Alan Shortis <alan.shortis@mac.com>",
-  "license": "MIT",
-  "devDependencies": {
-    "del": "^2.2.2",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-run": "^1.7.1",
-    "gulp-sass": "^3.1.0",
-    "gulp-util": "^3.0.8",
-    "node-notifier": "^5.0.2",
-    "vinyl-ftp": "^0.6.0"
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-helmet": "^5.2.0",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.5",
+    "styled-components": "^3.4.9"
   }
 }
