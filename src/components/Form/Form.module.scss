@@ -1,0 +1,37 @@
+.form {
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  button {
+    align-items: center;
+    aspect-ratio: 1/1;
+    background-color: var(--light);
+    border-radius: 0.25rem;
+    color: var(--dark);
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 1.5rem;
+    height: 2.5rem;
+    justify-content: center;
+    line-height: 1em;
+    &[disabled] {
+      cursor: not-allowed;
+      opacity: 0.25;
+    }
+  }
+  p {
+    font-size: 400%;
+    font-variant: tabular-nums;
+    letter-spacing: 1px;
+    text-align: center;
+    width: 4ch;
+  }
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+}

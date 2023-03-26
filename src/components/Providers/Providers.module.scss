@@ -1,0 +1,10 @@
+.providers {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+  a {
+    color: currentColor;
+    font-size: 1.5rem;
+  }
+}
