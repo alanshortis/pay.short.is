@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import styles from './Providers.module.scss';
 
 const providers = [
   {
@@ -16,11 +17,11 @@ interface Props {
 }
 
 export const Providers: React.FC<Props> = ({ amount }) => (
-  <>
+  <div className={styles.providers}>
     {providers.map(({ url, name }) => (
       <Link key={url} href={`${url}${amount}`}>
         {name}
       </Link>
     ))}
-  </>
+  </div>
 );

@@ -13,8 +13,6 @@ export const usePayMe = () => {
   }, []);
 
   useEffect(() => {
-    console.log(router.query.amount);
-
     if (router.query.amount) {
       const amount = Number(router.query.amount[0]);
 

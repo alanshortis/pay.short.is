@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
 interface Props {
-  amount: string;
+  amount: number;
 }
 
 export const DocumentHead: React.FC<Props> = ({ amount }) => {
